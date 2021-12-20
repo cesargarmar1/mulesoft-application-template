@@ -1,0 +1,47 @@
+#%RAML 1.0
+title: mulesoft-application-template
+
+documentation:
+  -
+    title: description
+    content: Objetivo de la aplicación
+
+/servicePath:
+  get:
+    displayName: sampleGetServiceName
+    description: Descripción corta del servicio
+    responses:
+      200:
+        description: OK
+        body:
+          application/json:
+            type: !include dataTypes/SampleGetServiceNameResponse.raml
+            # example: !include examples/SampleGetServiceNameResponse.json
+      400:
+        description: Bad Request
+        body:
+          application/json:
+            type: !include dataTypes/GenericErrorResponse.raml
+            # example: !include examples/SampleGetServiceNameResponse.json
+      500:
+        description: Internal Server Error
+        body:
+          application/json:
+            properties:
+              result:
+                type: !include dataTypes/GenericErrorResponse.raml
+
+  post:
+    displayName: samplePostServiceName
+    description: Descripción corta del servicio
+    body:
+      application/json:
+        type: !include dataTypes/SamplePostServiceNameRequest.raml
+        # example: !include examples/SamplePostServiceNameRequest.json
+    responses:
+      201:
+        description: Created
+        body:
+          application/json:
+            type: !include dataTypes/SamplePostServiceNameResponse.raml
+            # example: !include examples/SamplePostServiceNameResponse.json

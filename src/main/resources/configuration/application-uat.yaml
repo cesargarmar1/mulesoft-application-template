@@ -1,0 +1,11 @@
+operations:
+
+  createContract:
+    asdfasdf: "asdfajsldkfj"
+ 
+  updateOrderState:
+    schedulers:
+      hourlyScheduler:
+        frequency: 60
+        startDelay: 5
+        cronExpression: 0 0 0 0 0

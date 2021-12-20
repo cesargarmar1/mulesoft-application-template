@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd 
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2a82d1b4-3277-483f-8430-022b3660ff67" doc:description="Application listener">
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+	</http:listener-config>
+
+	<global-property doc:name="Global Property" doc:id="cf9bfca2-a36c-4f85-9de3-a968e527edcc" name="env" value="local" doc:description="Runtime environment"/>
+	
+	<configuration-properties doc:name="Configuration properties" doc:id="c5b71886-7318-458b-93a0-57a67ee657a9" file="configuration/application-global.yaml" doc:description="Global configuration properties"/>
+	
+	<configuration-properties doc:name="Configuration properties" doc:id="9650970f-decd-4fae-b56d-fecc826e8fca" file="configuration/application-${env}.yaml" doc:description="Environment configuration properties"/>
+	
+	<validation:config name="Validation" doc:name="Validation Config" doc:id="217285f3-0d56-4adb-a29d-b71310c428d7" doc:description="Global validation configuration"/>
+</mule>

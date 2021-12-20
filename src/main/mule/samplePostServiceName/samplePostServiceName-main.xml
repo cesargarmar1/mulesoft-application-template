@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:validation="http://www.mulesoft.org/schema/mule/validation" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+	<flow name="samplePostServiceName-main" doc:id="85e128f4-2285-4b6d-b7b6-70e60423d583" >
+		<logger level="INFO" doc:name="" doc:id="aa78b6d4-2740-42ce-92a0-56129cb1a77b" category="com.viewnext.mulesoft.samplePostServiceName" />
+		<flow-ref doc:name="Validate input" doc:id="03da1365-f453-42bb-b726-3e2dd906bc77" name="samplePostServiceName-validate-input"/>
+		<logger level="INFO" doc:name="" doc:id="4e032439-0a43-4dc5-8d13-811d9761ca54" category="com.viewnext.mulesoft.samplePostServiceName" />
+	</flow>
+	<sub-flow name="samplePostServiceName-validate-input" doc:id="1dab7aa7-77f3-4750-9e81-074d26ee3f14" >
+		<logger level="INFO" doc:name="" doc:id="c8e242ed-8d06-4722-a805-b02b05edb65e" category="com.viewnext.mulesoft.samplePostServiceName" />
+		<validation:is-true doc:name="Is true" doc:id="7e878365-e94f-41d5-a169-0fb138d9ff06" config-ref="Validation" expression="true" />
+		<logger level="INFO" doc:name="" doc:id="c641ca65-11e9-4c28-a40e-b8d31066ae57" category="com.viewnext.mulesoft.samplePostServiceName" />
+	</sub-flow>
+</mule>

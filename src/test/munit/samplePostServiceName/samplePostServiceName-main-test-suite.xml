@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="samplePostServiceName-main-test-suite.xml" />
+	<munit:test name="samplePostServiceName-main-test-suite-T001-test" doc:id="28441a96-a0e5-407b-8e2a-56d8d08743fe" description="Test" tags="samplePostServiceName,samplePostServiceName-main">
+		<munit:execution >
+			<flow-ref doc:name="" doc:id="3d7f790a-b6ee-40a1-9d7b-3674dede2d7b" name="samplePostServiceName-main"/>
+		</munit:execution>
+	</munit:test>
+
+
+</mule>

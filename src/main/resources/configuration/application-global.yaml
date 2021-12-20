@@ -1,0 +1,28 @@
+# Datos globales de la aplicación
+app:
+  port: "8081"
+  name: mulesoft-application-template
+
+# Parámetros de configuración de servicios
+services:
+  # Parámetros de configuración utilizados por múltiples servicios
+  common:
+    parametro: valor
+
+  # Parámetros propios de cada servicio
+  sampleGetServiceName:
+    parametro: valor
+
+  samplePostServiceName:
+    parametro: valor
+
+# Parámetros de conexión de aplicaciones y sistemas externos, APIs, backends, bases de datos...
+backends:
+  ac:
+    protocol: HTTP
+    host: ac.mule.com
+    port: "8081"
+  documents:
+    protocol: HTTP
+    host: documents.mule.com
+    port: "8081"
