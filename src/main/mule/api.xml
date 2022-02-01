@@ -129,4 +129,8 @@ output application/json
     <flow name="post:\servicePath:application\json:api-router">
 		<flow-ref doc:name="Flow Reference" doc:id="1621a49d-3b6c-4d88-90f3-4688385698a8" name="samplePostServiceName-main" />
     </flow>
+	<flow name="get:\users:application\json:api-router" doc:id="c8584e9a-e67f-41e9-a399-a2803b042b01" >
+		<flow-ref doc:name="Flow Reference" doc:id="a4d54628-9c1e-4701-8047-d468f99a7b4e" name="sampleGetUsers-main"/>
+	</flow>
+
 </mule>

@@ -45,3 +45,28 @@ documentation:
           application/json:
             type: !include dataTypes/SamplePostServiceNameResponse.raml
             # example: !include examples/SamplePostServiceNameResponse.json
+            
+/users:
+  get:
+    displayName: sampleGetUsers
+    description: Descripción corta del servicio
+    responses:
+      200:
+        description: OK
+        body:
+          application/json:
+            type: !include dataTypes/SampleGetUsersResponse.raml
+            example: !include examples/users.json
+      400:
+        description: Bad Request
+        body:
+          application/json:
+            type: !include dataTypes/GenericErrorResponse.raml
+            # example: !include examples/SampleGetServiceNameResponse.json
+      500:
+        description: Internal Server Error
+        body:
+          application/json:
+            properties:
+              result:
+                type: !include dataTypes/GenericErrorResponse.raml

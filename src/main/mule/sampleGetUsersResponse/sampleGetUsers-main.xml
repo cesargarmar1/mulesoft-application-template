@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:validation="http://www.mulesoft.org/schema/mule/validation"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="sampleGetUsers-main" doc:id="0a07ab98-0680-4572-b933-791e5cb7293d" >
+		<logger level="INFO" doc:name="" doc:id="6dd558b7-254d-4b80-b3ea-9eb448927ebc" message='#[cedar::common::logger::log("Inicio")]' category="com.viewnext.mulesoft.sampleGetServiceName" />
+		<flow-ref doc:name="Validate input" doc:id="e43e71c4-7df8-403c-b7e8-16f776931ed0" name="sampleGetUsers-validate-input"/>
+		<logger level="INFO" doc:name="" doc:id="ffb23949-826b-4e4b-9758-3671632c1fc2" message='#[cedar::common::logger::log("Fin")]' category="com.viewnext.mulesoft.sampleGetServiceName" />
+	</flow>
+	<sub-flow name="sampleGetUsers-validate-input" doc:id="719de919-455c-48c2-b3a9-d6d341de1a35" >
+		<logger level="INFO" doc:name="" doc:id="ab2fe895-8bdd-4cc1-a0e3-a2a4a1300272" message='#[cedar::common::logger::log("Inicio")]' category="com.viewnext.mulesoft.sampleGetServiceName" />
+		<validation:is-true doc:name="Is true" doc:id="78febed4-0ce5-4e3d-ae7b-7931110dcecc" config-ref="Validation" expression="true" />
+		<logger level="INFO" doc:name="" doc:id="9082e24c-d3f4-481f-9b4b-0235ff68c971" message='#[cedar::common::logger::log("Fin")]' category="com.viewnext.mulesoft.sampleGetServiceName" />
+	</sub-flow>
+</mule>

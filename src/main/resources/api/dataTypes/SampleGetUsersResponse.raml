@@ -1,0 +1,17 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  id?: integer
+  nombre: string
+  username: string
+  email: string
+  direccion: string
+  phone: string
+  website: string
+  company:
+    type: object
+    properties:
+      name: string
+      catchPhrase: string
+      bs: string

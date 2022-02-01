@@ -1,0 +1,19 @@
+%dw 2.0
+
+type auto_0a07ab98_0680_4572_b933_791e5cb7293d_Output_Payload = {
+  website: String, 
+  phone: String, 
+  direccion: String, 
+  company: {
+    bs: String, 
+    catchPhrase: String, 
+    name: String, 
+    _?: Any
+  }, 
+  id: Number, 
+  nombre: String, 
+  email: String, 
+  username: String, 
+  _?: Any
+}
+
